@@ -62,7 +62,7 @@ void jogar(JogoDeTabuleiro* jogo) {
 
 int main() {
     int escolha;
-    std::cout << "Escolha o jogo:\n1. Reversi\n2. Lig4\n";
+    std::cout << "Escolha o jogo:\n1. Jogo da Velha\n2. Lig4(ainda não unciona)\n";
     std::cin >> escolha;
 
     JogoDeTabuleiro* jogo = nullptr;

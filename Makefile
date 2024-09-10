@@ -43,6 +43,10 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp $(HEADERS)
 # Regra de debug
 debug: $(EXEC_DEBUG)
 
+#regra de execução
+run: all
+	@$(EXEC)
+
 # Regra de limpeza
 clean:
 	rm -rf $(OBJ_DIR) $(BIN_DIR)
