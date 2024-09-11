@@ -2,6 +2,7 @@
 #include "../include/JogoDaVelha.hpp"
 #include "../include/JogoDeTabuleiro.hpp"
 #include "../include/Reversi.hpp"
+#include "../include/Lig4.hpp"
 #include <iostream>
 
 
@@ -63,22 +64,28 @@ void jogar(JogoDeTabuleiro* jogo) {
 
 int main() {
     int escolha;
-    std::cout << "Escolha o jogo:\n1. Jogo da Velha\n2. Reversi\n3. Lig4(ainda não funciona)\n";
+    std::cout << "Escolha o jogo:\n1. Jogo da Velha\n2. Reversi\n3. Lig4\n";
     std::cin >> escolha;
 
     JogoDeTabuleiro* jogo = nullptr;
 
-    if (escolha == 1) {
+    switch (escolha){
+    case 1:
         jogo = new JogoDaVelha();
-    } else if (escolha == 2) {
+        break;
+    case 2:
         jogo = new Reversi();
-    } else {
-        std::cout << "Escolha inválida.\n";
-        return 1;
+        break;
+    case 3:
+        jogo = new Lig4();
+        break;
+    default:
+        std::cout << "Escolha invalida" << "\n";
+        break;
     }
-
-    jogar(jogo);
-    delete jogo;
-
+    if(jogo!=nullptr){
+        jogar(jogo);
+        delete jogo;
+    }
     return 0;
 }
