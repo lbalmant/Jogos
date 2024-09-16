@@ -12,6 +12,7 @@ public:
     bool verificarVitoria(char jogador) const override;
     bool tabuleiroCheio() const override;
     bool isBidimensional() const override { return true; }
+    virtual bool ehJogoDaVelha2() const override {return false;}
 
 private:
     bool dentroDoTabuleiro(int linha, int coluna) const;

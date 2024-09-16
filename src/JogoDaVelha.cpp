@@ -1,4 +1,4 @@
-#include "../include/JogoDaVelha.hpp"
+#include "..\include\JogoDaVelha.hpp"
 #include <algorithm>
 
 JogoDaVelha::JogoDaVelha() : JogoDeTabuleiro(3, 3) {}
@@ -39,6 +39,9 @@ bool JogoDaVelha::tabuleiroCheio() const {
 
 bool JogoDaVelha::isBidimensional() const {
     return true;
+}
+bool JogoDaVelha::ehJogoDaVelha2() const{
+    return false;
 }
 
 void JogoDaVelha::jogadaIA(char jogador) {

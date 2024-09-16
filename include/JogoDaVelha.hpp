@@ -10,6 +10,7 @@ public:
     bool verificarVitoria(char jogador) const override;
     bool tabuleiroCheio() const override;
     bool isBidimensional() const override;
+    virtual bool ehJogoDaVelha2() const override;
 
     void jogadaIA(char jogador);
 

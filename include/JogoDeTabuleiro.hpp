@@ -13,11 +13,19 @@ class JogoDeTabuleiro{
         virtual bool jogadaValida(int coluna) const;
         virtual void fazerJogada(int coluna, char jogador);
 
+        // Método para o jogo da velha 2.0
+        virtual bool jogadaValida(int linha, int coluna, int indice) const;
+        virtual bool fazerJogada(int linha, int coluna, char jogador, int& indice);
+
         virtual bool verificarVitoria(char jogador) const = 0;
         virtual bool tabuleiroCheio() const = 0;
         virtual bool isBidimensional() const = 0;
+        virtual bool ehJogoDaVelha2() const = 0;
         
-        void imprimirTabuleiro() const;
+        virtual void imprimirTabuleiro() const;
+
+        void setValorTabuleiro(int linha, int coluna, char jogador);
+        char getValorTabuleiro(int linha, int coluna);
 
     protected:
         int linhas, colunas;
