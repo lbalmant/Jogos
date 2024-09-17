@@ -22,6 +22,8 @@ class JogoDeTabuleiro{
         virtual bool isBidimensional() const = 0;
         virtual bool ehJogoDaVelha2() const = 0;
         
+
+
         virtual void imprimirTabuleiro() const;
 
         void setValorTabuleiro(int linha, int coluna, char jogador);

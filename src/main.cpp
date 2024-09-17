@@ -99,8 +99,6 @@ int main() {
             jogo = new Lig4();
             break;
         case 4:
-            jogo = new JogoDaVelha2();
-            jogo->imprimirTabuleiro();
             std::cout << "Jogo de inicio(entre 1 e 9): ";
             std::cin >> inicio;
             while(inicio<1||inicio>9){
@@ -109,9 +107,8 @@ int main() {
                 
             }
             inicio--;
-        default:
-            std::cout << "Escolha invalida" << "\n";
-            break;
+            jogo = new JogoDaVelha2(inicio);
+
         }
     if(jogo!=nullptr){
         jogar(jogo, inicio);
